@@ -10,7 +10,28 @@
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="/mahasiswa">Mahasiswa</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="/dosen">Dosen</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="/prodi">Prodi</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                            href="#"
+                            id="dropdownProdi"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Prodi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownProdi">
+                            <li>
+                                <a class="dropdown-item" href="{{ route('prodi.card') }}">
+                                    Informasi Prodi
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('prodi.index') }}">
+                                    Data Prodi
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('ruangan.index') }}">Ruangan</a> </li>
                 </ul>
                 <form class="d-flex" role="search"> <input class="form-control me-2" type="search"

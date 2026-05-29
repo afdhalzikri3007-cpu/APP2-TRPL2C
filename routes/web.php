@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\RuanganController;
+use App\Http\Controllers\ProdiController;
 
 Route::get('/', function () {
     return view('home');
@@ -83,7 +84,15 @@ Route::resource('ruangan', RuanganController::class);
 Route::get('/prodi', function () {
     $data = ['Teknik Informatika', 'Manajemen Informatika'];
     return view('akademik.prodi', compact('data'));
-});
+})->name('prodi.card');
+
+// CRUD Data Prodi
+Route::get('/data-prodi', [ProdiController::class, 'index'])->name('prodi.index');
+Route::get('/tambah-prodi', [ProdiController::class, 'create'])->name('prodi.create');
+Route::post('/data-prodi', [ProdiController::class, 'store'])->name('prodi.store');
+Route::get('/data-prodi/{id}/edit', [ProdiController::class, 'edit'])->name('prodi.edit');
+Route::put('/data-prodi/{id}', [ProdiController::class, 'update'])->name('prodi.update');
+Route::delete('/data-prodi/{id}', [ProdiController::class, 'destroy'])->name('prodi.destroy');
 // Route::get('/mahasiswa', function () {
 //     $nama = 'Taylor Otwell';
 //     $nim = '2022180001';
