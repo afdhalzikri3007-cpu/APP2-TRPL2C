@@ -11,6 +11,7 @@
                     <li class="nav-item"> <a class="nav-link" href="/mahasiswa">Mahasiswa</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="/dosen">Dosen</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="/prodi">Prodi</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('ruangan.index') }}">Ruangan</a> </li>
                 </ul>
                 <form class="d-flex" role="search"> <input class="form-control me-2" type="search"
                         placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success"

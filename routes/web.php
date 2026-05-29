@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\RuanganController;
 
 Route::get('/', function () {
     return view('home');
@@ -78,6 +79,7 @@ Route::get('/restore', [MahasiswaController::class, 'restore']);
 Route::get('/force-delete', [MahasiswaController::class, 'forceDelete']);
 
 Route::resource('dosen', DosenController::class);
+Route::resource('ruangan', RuanganController::class);
 Route::get('/prodi', function () {
     $data = ['Teknik Informatika', 'Manajemen Informatika'];
     return view('akademik.prodi', compact('data'));
